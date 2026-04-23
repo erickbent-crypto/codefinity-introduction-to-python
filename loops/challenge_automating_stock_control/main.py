@@ -13,8 +13,7 @@ for item in inventory:
     current_stock, min_stock, restock_quantity, onsale = inventory[item]
     while current_stock<min_stock:
         current_stock += restock_quantity
-        inventory[item][0]=current_stock
-
+    inventory[item][0]=current_stock
     if current_stock>discount_threshold and not onsale:
         inventory[item][3] = True
      
